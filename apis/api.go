@@ -67,7 +67,7 @@ func getOneCourse(w http.ResponseWriter, r *http.Request) {
 	// grab id from request
 	params := mux.Vars(r)
 	fmt.Println(params)
-	fmt.Print("ayush")
+	fmt.Print("ayuszzzzzh")
 	// loop through courses, find matching id
 
 	for _, courses := range courses {

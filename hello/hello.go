@@ -15,7 +15,7 @@ type Student struct {
     return op(a, b)
 }
 func main() {
-    fmt.Println("Hello, cutie!")
+    fmt.Println("Hello, cutie! sad i am ")
 	fmt.Printf("Random number: %d\n", rand.Intn(100))
 	sum , diff := addOrsub(10, 5)
 	fmt.Printf("Sum: %d, Difference: %d\n", sum, diff)

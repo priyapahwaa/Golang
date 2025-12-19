@@ -28,7 +28,7 @@ func EncodeJsonData(){
 	if(err!= nil){
 		panic(err)
 	}
-	fmt.Println("Final JSON data:")
+	fmt.Println("Final JSON data: yehayeahyeah")
 	fmt.Println(string(finalJson))
 }
 

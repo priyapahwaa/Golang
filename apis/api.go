@@ -3,6 +3,7 @@ package main
 import (
 	"encoding/json"
 	"fmt"
+	"log"
 	"net/http"
 
 	"github.com/gorilla/mux"
@@ -28,6 +29,18 @@ func (c *Couse) IsEmpty() bool {
 	return c.Title == "" && c.Price == 0 && c.Author == nil
 }
 func main() {
+	fmt.Print("working eveyrthing fine")
+	r:= mux.NewRouter()
+
+// Create a new Course object and add it to the courses slice, then update courses with the new slic
+	courses = append(courses, Couse{CouseID: "2", Title: "ReactJS", Price: 299, Author: &Author{Fullname: "Ayush", Website: "learncodeonline.in"}})
+    
+	r.HandleFunc("/" , serveHome).Methods("GET")
+	r.HandleFunc("/courses" , getAllCourses).Methods("GET")
+	r.HandleFunc("/course/{id}" , getOneCourse).Methods("GET")
+	//listen 
+	log.Fatal(http.ListenAndServe(":4000" , r))
+
 
 }
 
@@ -67,7 +80,6 @@ func getOneCourse(w http.ResponseWriter, r *http.Request) {
 	// grab id from request
 	params := mux.Vars(r)
 	fmt.Println(params)
-	fmt.Print("ayuszzzzzh")
 	// loop through courses, find matching id
 
 	for _, courses := range courses {
@@ -79,3 +91,5 @@ func getOneCourse(w http.ResponseWriter, r *http.Request) {
 	fmt.Errorf("No course found with given id")
 	fmt.Println("Get one course")
 }
+
+

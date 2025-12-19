@@ -15,7 +15,7 @@ type Student struct {
     return op(a, b)
 }
 func main() {
-    fmt.Println("Hello, World!")
+    fmt.Println("Hello, cutie!")
 	fmt.Printf("Random number: %d\n", rand.Intn(100))
 	sum , diff := addOrsub(10, 5)
 	fmt.Printf("Sum: %d, Difference: %d\n", sum, diff)
@@ -29,7 +29,7 @@ func main() {
 
 
 	s1 := Student{
-        name: "Ayush",
+        name: "Ayush Tibrewal",
         age:  21,
         cgpa: 8.05,
     }
@@ -42,7 +42,7 @@ func main() {
 	ayush := func(name string , age int){
 		fmt.Printf("Name: %s, Age: %d\n", name, age)
 	}
-	ayush("Ayush" , 21)
+	ayush("Ayush" , 12)
 
 
 

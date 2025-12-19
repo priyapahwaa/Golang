@@ -29,7 +29,7 @@ func main() {
 
 
 	s1 := Student{
-        name: "Ayush Tibrewal",
+        name: "Ayush Tibrewal hello",
         age:  21,
         cgpa: 8.05,
     }

@@ -89,6 +89,7 @@ func getOneCourse(w http.ResponseWriter, r *http.Request) {
 		}
 	}
 	fmt.Errorf("No course found with given id")
+	fmt.Errorf("404 not found")
 	fmt.Println("Get one course")
 }
 

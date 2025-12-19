@@ -28,7 +28,7 @@ func EncodeJsonData(){
 	if(err!= nil){
 		panic(err)
 	}
-	fmt.Println("Final JSON data by priyaaaa:")
+	fmt.Println("Final JSON data:")
 	fmt.Println(string(finalJson))
 }
 
@@ -47,7 +47,7 @@ func DecodeJsonData(){
 	var courseObj Course
 	checkValid := json.Valid(jsonDataFromWeb)		
 	if(checkValid){
-		fmt.Println("Ayush ka data is valid")
+		fmt.Println("JSON data is valid")
 		json.Unmarshal(jsonDataFromWeb , &courseObj)
 		fmt.Printf("%#v\n" , courseObj)
 	}
